@@ -5,7 +5,7 @@ const hbsRouter = require('./routers/hbs-router');
 const adminRouter = require('./routers/admin-router');
 
 const app = express();
-const port = 3000;
+const port = 3001;
 
 app.set('view engine', 'hbs');
 

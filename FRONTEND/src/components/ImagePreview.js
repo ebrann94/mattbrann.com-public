@@ -1,4 +1,5 @@
 import React from 'react';
+import '../styles/ImagePreview.css';
 
 const ImagePreview = (props) => {
     return (
@@ -9,10 +10,9 @@ const ImagePreview = (props) => {
                     props.images.map((image, index) => {
                         return  <img 
                                     key={index}
-                                    src={`/images/${props.section}/${props.project}/${image}`} 
+                                    src={`/images/${props.section}/${props.name}/${image}`} 
                                     alt="project" 
-                                    height="50px" 
-                                    width="50px"
+                                    className="thumbnail"
                                 />
                     })
                 }

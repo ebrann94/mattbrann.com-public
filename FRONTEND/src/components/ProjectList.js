@@ -1,12 +1,15 @@
 import React from 'react';
 import ProjectListItem from './ProjectItem';
+import '../styles/ProjectList.css';
 
 const ProjectList = (props) => {
-    const keys = Object.keys(props.projectList);
+    if (props.projectList) {
+        var keys = Object.keys(props.projectList);
+    }
     
     return(
         <div>
-            {
+            {keys &&
                 keys.map(key => {
                     return (
                         <div key={key}>

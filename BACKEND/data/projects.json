@@ -6,8 +6,7 @@
             "images": [
                 "01_soho_form.png",
                 "02_soho_form.png",
-                "03_soho_form.png",
-                "Matthew_Doctors_Letter_2.jpeg"
+                "03_soho_form.png"
             ]
         },
         {
@@ -51,14 +50,14 @@
             "name": "interiors",
             "show": true,
             "images": [
-                "INTERIORS1.jpg",
-                "INTERIORS2.jpg",
-                "INTERIORS3.jpg",
-                "INTERIORS4.jpg",
-                "INTERIORS5.jpg",
-                "INTERIORS6.jpg",
-                "INTERIORS7.jpg",
-                "THUMBNAIL-8.jpg"
+                "INTERIORS_1.png",
+                "INTERIORS_2.png",
+                "INTERIORS_3.png",
+                "INTERIORS_4.png",
+                "INTERIORS_5.png",
+                "INTERIORS_6.png",
+                "INTERIORS_7.png",
+                "THUMBNAIL-8.png"
             ]
         },
         {
@@ -122,8 +121,30 @@
             "name": "lfw",
             "show": true,
             "images": [
-                "01_image.jpeg",
-                "02_image.jpeg"
+                "lfw_2.jpg",
+                "lfw_5.jpg",
+                "lfw_6.jpg",
+                "lfw_7.jpg",
+                "lfw_8.jpg",
+                "lfw_10.jpg",
+                "lfw_11.jpg",
+                "lfw_12.jpg",
+                "lfw_13_5.jpg",
+                "lfw_13.jpg",
+                "lfw_14_5.jpg",
+                "lfw_15.jpg",
+                "lfw_16.jpg",
+                "lfw_17.jpg",
+                "lfw_18.jpg",
+                "lfw_19.jpg",
+                "lfw_20.jpg",
+                "lfw_21.jpg",
+                "lfw_22.jpg",
+                "lfw_25.jpg",
+                "lfw_29.jpg",
+                "lfw_30.jpg",
+                "lfw_31.jpg",
+                "THUMBNAIL_lfw_4.jpg"
             ]
         },
         {
@@ -134,7 +155,87 @@
     ],
     "editorial": [
         {
-            "name": "bluey"
+            "name": "bluey",
+            "show": true,
+            "images": [
+                "1.jpg",
+                "2.jpg",
+                "3.png",
+                "4.jpg",
+                "5.jpg",
+                "6.jpg",
+                "7_thumbnail.png"
+            ]
+        },
+        {
+            "name": "flannels_aw18",
+            "show": true,
+            "images": [
+                "1_THUMBNAIL.jpg",
+                "2.jpg",
+                "3.jpg",
+                "4.jpg",
+                "5.jpg",
+                "6.jpg",
+                "7.jpg",
+                "8.jpg"
+            ]
+        },
+        {
+            "name": "hilfiger_x_gigi",
+            "show": true,
+            "images": [
+                "2.jpg",
+                "3.jpg",
+                "4.jpg",
+                "5.png",
+                "THUMBNAIL_1.jpg"
+            ]
+        },
+        {
+            "name": "jan_fitness",
+            "show": true,
+            "images": [
+                "1_THUMBNAIL.jpg",
+                "2.jpg",
+                "3_5.jpg",
+                "3.jpg",
+                "4.jpg",
+                "6.jpg",
+                "7.jpg",
+                "8.jpg"
+            ]
+        },
+        {
+            "name": "rudemanners",
+            "show": true,
+            "images": [
+                "1_THUMBNAIL.jpg",
+                "1_5.jpg",
+                "2.jpg",
+                "3.jpg",
+                "4.jpg",
+                "5.jpg",
+                "6.jpg",
+                "7.jpg",
+                "8.jpg",
+                "9.jpg",
+                "10.jpg",
+                "11.jpg",
+                "12_5.jpg",
+                "12.jpg",
+                "13.jpg",
+                "14_5.jpg",
+                "14.jpg",
+                "15.jpg",
+                "16.jpg",
+                "17.jpg",
+                "18.jpg",
+                "19.jpg",
+                "20.jpg",
+                "21.jpg"
+            ]
         }
-    ]
+    ],
+    "homepage": []
 }

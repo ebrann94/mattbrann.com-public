@@ -18,19 +18,25 @@ function menuComposer(currentPage) {
 
     let out = [];
     for(let property in projects) {
+        let topicClassNames = 'menu__topic';
+        let dropdownClass = 'drop-down-content'
+
         const links = projects[property].map(link => {
             if (link.name.toLowerCase() !== currentPage) {
                 return `<li><a href="/projects/${property}/${link.name.toLowerCase()}">${link.name.replace('_', ' ')}</a></li>`;
             } else {
+                topicClassNames += ' menu__topic-active';
+                dropdownClass += ' open';
                 return `<li><a href="#">${link.name.replace('_', ' ')}</a></li>`
             }
         });
+        
         const branch = `
             <div class="menu__branch ${property}">
-                <div class="menu__topic">
+                <div class="${topicClassNames}">
                     <h3>${property.replace('_', ' ').toUpperCase()}</h3>
                 </div>
-                <div class="drop-down-content">
+                <div class="${dropdownClass}">
                     <ul>
                         ${links.join('\n')}
                     </ul>
@@ -51,7 +57,7 @@ function imageList(folder, project) {
     projects[folder].forEach(current => {
         if(current.name === project) {
             out = current.images.map(imageName => {
-                return `<img src="/images/${folder}/${project}/${imageName}" />\n`
+                return `<img src="/images/${folder}/${project}/${imageName}" class="slideshow__slide slide__portrait"/>\n`
             });
         }
     });

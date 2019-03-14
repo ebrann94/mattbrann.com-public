@@ -4,16 +4,14 @@ import AddNewProject from './components/AddNewProject';
 import AddImage from './components/AddImage';
 import ImagePreview from './components/ImagePreview';
 
-import ProjectsJSON from './projects.json';
+import './App.css';
 
 class App extends Component {
   constructor() {
     super();
 
     this.state = {
-      projectList: {
-
-      },
+      projectList: null,
       currentProject: {
         section: '',
         name: '',
@@ -25,71 +23,86 @@ class App extends Component {
   }
 
   fetchProjectList = () => {
-    // fetch('/admin/projects')
-    //   .then(res => {
-    //     console.log(res.json());
-    //   })
-    //   .then(data => {
-    //     // console.log(data);
-    //     // this.setState({projectList: data.projects});
-    //   })
-    this.setState({projectList: ProjectsJSON})
+    fetch('/admin/projects')
+      .then(res => res.json())
+      .then(data => {
+        console.log(data);
+        this.setState({projectList: data});
+      });
   }
 
   handleAddNewProject = (e) => {
     e.preventDefault();
 
-    const section = e.target.section.value;
-    const projectName = e.target.project.value
+    const section = e.target.section.value.replace(' ', '_').toLowerCase();
+    const projectName = e.target.project.value.replace(' ', '_').toLowerCase();
 
     const projectInfo = {
       section,
       projectName
     }
 
-    console.log(projectInfo);
-
-    this.setState((prevState ) => {
-      prevState.projectList[section].push({
-        name: projectName,
-        show: true,
-        images: []
-      });
-      return {
-        projectList: prevState.projectList
+    fetch('/admin/add-new-project', {
+      method: 'POST',
+      headers: {
+        'Content-type': 'application/json'
+      },
+      body: JSON.stringify(projectInfo)
+    }).then(res => {
+      if (res.ok === true) {
+        console.log('New Project Added');
       }
+      return res.json();
+    }).then(data => {
+      console.log(data);
+      this.setState({projectList: data});
     })
-
-    // fetch('/admin/add-new-project', {
-    //   method: 'POST',
-    //   headers: {
-
-    //   },
-    //   body: JSON.stringify(projectInfo)
-    // });
 
   }
 
   handleSelectCurrentProject = (section, projectName) => {
-    let newProject = {
-      section
+    let currentProject = {
+      section,
+      name: projectName
     };
 
     this.state.projectList[section].forEach(project => {
       if (project.name === projectName) {
-        newProject.name = project.name;
-        newProject.images = project.images;
+        // currentProject.name = project.name;
+        currentProject.images = project.images;
       }
     });
 
-    this.setState({currentProject: newProject});
+    this.setState({ currentProject });
   }
 
   handleUploadImage = (e) => {
-    const data = new FormData(e.target.value);
+    e.preventDefault();
 
-    data.append('details', JSON.stringify(this.state.currentProject))
+    const form = e.target;
+    
+    const data = new FormData();
+    data.append('section', this.state.currentProject.section);
+    data.append('projectName', this.state.currentProject.name);
+    data.append('photo', form.photo.files[0]);
 
+    for(let pair of data.entries()) {
+      console.log(pair);
+    }
+
+    fetch('/admin/add-photo', {
+      method: 'POST',
+      body: data
+    })
+    .then(res => {
+        if (res.ok) {
+          console.log('Image Uploaded');
+        }
+    })
+  }
+
+  handleTestServer = () => {
+    fetch('/admin/test-connection');
   }
 
   componentDidMount() {
@@ -102,17 +115,26 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <h1>App is Rendering</h1>
-        <ProjectList 
-          projectList={this.state.projectList}
-          handleSelectCurrentProject={this.handleSelectCurrentProject}
-        />
-        <AddNewProject handleAddNewProject={this.handleAddNewProject} />
-        <section className="image">
+      <div className="app">
+        <div className="project-list">
+         <h2>Project List</h2>
+          <ProjectList 
+            projectList={this.state.projectList}
+            handleSelectCurrentProject={this.handleSelectCurrentProject}
+          />
+          <AddNewProject handleAddNewProject={this.handleAddNewProject} />
+        </div>
+        <section className="current-project">
+          <div className="current-project__info">
+            <h4>{this.state.currentProject.section}</h4>
+            <h4>{this.state.currentProject.name}</h4>
+          </div>
           <ImagePreview {...this.state.currentProject} />
-          <AddImage handleUploadImage={this.handleUploadImage}/>
+          <AddImage  
+            handleUploadImage={this.handleUploadImage}
+          />
         </section>
+        {/* <button onClick={this.handleTestServer}>Test Server Connection</button> */}
       </div>
     );
   }

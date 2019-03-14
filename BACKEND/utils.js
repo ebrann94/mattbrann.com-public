@@ -8,6 +8,7 @@ const getJSON = (path) => {
 
 const saveJSONToFile = (path, objectToSave) => {
     fs.writeFileSync(path, JSON.stringify(objectToSave, undefined, 4));
+    console.log('JSON Saved');
 }
 
 const projectsJSONPath = path.join(__dirname, 'data', 'projects.json');

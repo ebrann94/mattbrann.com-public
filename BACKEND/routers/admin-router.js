@@ -32,6 +32,8 @@ router.post('/admin/login', (req, res) => {
 router.post('/admin/add-new-project', (req, res) => {
     const { section, projectName } = req.body;
 
+    console.log(section, projectName);
+
     const newProject = {
         name: projectName,
         show: true,
@@ -58,8 +60,8 @@ router.post('/admin/add-new-project', (req, res) => {
         fs.mkdirSync(imageDirectoryPath);
     } 
 
-
-    res.send();
+    
+    res.json(projects);
 });
 
 // Adds the photo to the project image folder and adds the image name to projects.json
@@ -70,7 +72,7 @@ router.post('/admin/add-photo', upload.single('photo'), (req, res) => {
 
     projects[section].forEach(current => {
         if (current.name === projectName) {
-            current.images.push(photoName);
+            current.images.push(req.file.filename);
         }
     });
 
@@ -80,8 +82,20 @@ router.post('/admin/add-photo', upload.single('photo'), (req, res) => {
 });
 
 router.get('/admin/projects', (req, res) => {
+    console.log('projects.json being sent');
     res.json(projectsJSON);
 });
+
+router.get('/admin/test-connection', (req, res) => {
+    console.log('Connection Established with front end');
+    res.send();
+});
+
+// router.post('/admin/photo-test', upload.single('photo'), (req, res) => {
+//     console.log(req.body.section, req.body.projectName);
+//     console.log(req.file);
+//     res.send();
+// })
 
 module.exports = router;
 

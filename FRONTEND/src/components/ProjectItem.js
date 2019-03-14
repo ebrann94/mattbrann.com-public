@@ -6,6 +6,7 @@ const ProjectListItem = (props) => (
             console.log(props.name, props.section);
             props.handleSelectCurrentProject(props.section, props.name);
         }}
+        className="project-list__item"
     >
         {props.name}
     </li>
