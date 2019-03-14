@@ -1,0 +1,140 @@
+{
+    "still_life": [
+        {
+            "name": "soho_form",
+            "show": true,
+            "images": [
+                "01_soho_form.png",
+                "02_soho_form.png",
+                "03_soho_form.png",
+                "Matthew_Doctors_Letter_2.jpeg"
+            ]
+        },
+        {
+            "name": "burning_money",
+            "show": true,
+            "images": [
+                "BURNING_MONEY1.jpg",
+                "BURNING_MONEY2_thumbnail.png",
+                "BURNING_MONEY3.jpg"
+            ]
+        },
+        {
+            "name": "found_set",
+            "show": true,
+            "images": [
+                "FOUND_SET1.jpg",
+                "THUMBNAIL_FOUND_SET2.jpg"
+            ]
+        },
+        {
+            "name": "gucci_jewellery",
+            "show": true,
+            "images": [
+                "GUCCI_JEWELLERY_1.jpg",
+                "GUCCI_JEWELLERY_2.jpg",
+                "GUCCI_JEWELLERY_4.jpg",
+                "GUCCI_JEWELLERY_5.jpg",
+                "THUMBNAIL.jpg"
+            ]
+        },
+        {
+            "name": "gucci_sunglasses",
+            "show": true,
+            "images": [
+                "GUCCI3.jpg",
+                "GUCCI9.jpg",
+                "THUMBNAIL_GUCCI2.jpg"
+            ]
+        },
+        {
+            "name": "interiors",
+            "show": true,
+            "images": [
+                "INTERIORS1.jpg",
+                "INTERIORS2.jpg",
+                "INTERIORS3.jpg",
+                "INTERIORS4.jpg",
+                "INTERIORS5.jpg",
+                "INTERIORS6.jpg",
+                "INTERIORS7.jpg",
+                "THUMBNAIL-8.jpg"
+            ]
+        },
+        {
+            "name": "nike_cr7",
+            "show": true,
+            "images": [
+                "NIKE_CR71.jpg",
+                "NIKE_CR72.jpg",
+                "NIKE_CR73.jpg",
+                "THUMBNAIL.jpg"
+            ]
+        },
+        {
+            "name": "ninety_nine",
+            "show": true,
+            "images": [
+                "90's-1.jpg",
+                "90's-4.jpg",
+                "90's-7.jpg",
+                "90's-10.jpg",
+                "90's-17.jpg",
+                "THUMBNAIL.jpg"
+            ]
+        },
+        {
+            "name": "party_accessories",
+            "show": true,
+            "images": [
+                "PARTY_ACCESSORIES1.jpg",
+                "PARTY_ACCESSORIES2.jpg",
+                "PARTY_ACCESSORIES3.jpg",
+                "PARTY_ACCESSORIES4.jpg",
+                "PARTY_ACCESSORIES5.jpg",
+                "PARTY_ACCESSORIES7.jpg",
+                "PARTY_ACCESSORIES8.jpg",
+                "THUMBNAIL.jpg"
+            ]
+        },
+        {
+            "name": "versace",
+            "show": true,
+            "images": [
+                "VERSACE_JEWELLERY_1.jpg",
+                "VERSACE_JEWELLERY_2.jpg",
+                "VERSACE_JEWELLERY_3.jpg",
+                "VERSACE_JEWELLERY_5.jpg"
+            ]
+        },
+        {
+            "name": "wonderland_fragrance",
+            "show": true,
+            "images": [
+                "THUMBNAIL_WONDERLAND_FRAGRANCE_1.tif",
+                "WONDERLAND_FRAGRANCE_2.tif",
+                "WONDERLAND_FRAGRANCE_3.tif"
+            ]
+        }
+    ],
+    "streetstyle": [
+        {
+            "name": "lfw",
+            "show": true,
+            "images": [
+                "01_image.jpeg",
+                "02_image.jpeg"
+            ]
+        },
+        {
+            "name": "pfw",
+            "show": true,
+            "images": []
+        }
+    ],
+    "editorial": [
+        {
+            "name": "bluey"
+        }
+    ]
+}
