@@ -13,23 +13,26 @@ const { getJSON, saveJSONToFile, projectsJSONPath } = require('../utils');
 const router = new Router();
 
 router.post('/admin/login', (req, res) => {
-    const { username, password } = req.body;
+    const { password } = req.body;
+    console.log(password);
 
     const adminCredentials = getJSON(path.join(__dirname, '..', 'data', 'admin.json'))
 
-    if (adminCredentials.username === username && bcrypt.compareSync(password, adminCredentials.password)) {
+    if (bcrypt.compareSync(password, adminCredentials.password)) {
         console.log('Credentials Correct');
+        const token = jwt.sign({ payload: 'Hello World!' }, 'jacqui', { expiresIn: '1 days' });
+        res.send({ 
+            loginSuccess: true,
+            token 
+        });
     } else {
         console.log('Credentials Incorrect');
+        res.status(401).send({ error: 'Username or password incorrect' });
     }
-
-    // const token = jwt.sign()
-
-    res.send();
 });
 
 // Adds project data to projects.json and creates folder for project images.
-router.post('/admin/add-new-project', (req, res) => {
+router.post('/admin/add-new-project', auth, (req, res) => {
     const { section, projectName } = req.body;
 
     console.log(section, projectName);
@@ -65,7 +68,7 @@ router.post('/admin/add-new-project', (req, res) => {
 });
 
 // Adds the photo to the project image folder and adds the image name to projects.json
-router.post('/admin/add-photo', upload.single('photo'), (req, res) => {
+router.post('/admin/add-photo', auth, upload.single('photo'), (req, res) => {
     const { section, projectName } = req.body;
 
     const projects = getJSON(projectsJSONPath);
@@ -81,7 +84,7 @@ router.post('/admin/add-photo', upload.single('photo'), (req, res) => {
     res.send();
 });
 
-router.get('/admin/projects', (req, res) => {
+router.get('/admin/projects', auth, (req, res) => {
     console.log('projects.json being sent');
     res.json(projectsJSON);
 });

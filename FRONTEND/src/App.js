@@ -3,6 +3,7 @@ import ProjectList from './components/ProjectList';
 import AddNewProject from './components/AddNewProject';
 import AddImage from './components/AddImage';
 import ImagePreview from './components/ImagePreview';
+import Login from './components/Login';
 
 import './App.css';
 
@@ -17,13 +18,17 @@ class App extends Component {
         name: '',
         images: []
       },
-      loggedIn: false,
-      token: ''
+      loggedIn: !!localStorage.getItem('token'),
+      token: localStorage.getItem('token') || ''
     }
   }
 
   fetchProjectList = () => {
-    fetch('/admin/projects')
+    fetch('/admin/projects', {
+      headers: {
+        'Authorization': `Bearer ${this.state.token}`
+      }
+    })
       .then(res => res.json())
       .then(data => {
         console.log(data);
@@ -45,7 +50,8 @@ class App extends Component {
     fetch('/admin/add-new-project', {
       method: 'POST',
       headers: {
-        'Content-type': 'application/json'
+        'Content-type': 'application/json',
+        'Authorization': `Bearer: ${this.state.token}`
       },
       body: JSON.stringify(projectInfo)
     }).then(res => {
@@ -92,7 +98,10 @@ class App extends Component {
 
     fetch('/admin/add-photo', {
       method: 'POST',
-      body: data
+      body: data,
+      headers: {
+        'Authorization': `Bearer ${this.state.token}`
+      }
     })
     .then(res => {
         if (res.ok) {
@@ -101,12 +110,40 @@ class App extends Component {
     })
   }
 
-  handleTestServer = () => {
-    fetch('/admin/test-connection');
+  handleLogin = (e) => {
+    e.preventDefault();
+    console.log(e.target.password.value);
+    // this.setState({ loggedIn: true });
+    const credentials = {
+      password: e.target.password.value
+    }
+
+    fetch('/admin/login', {
+      method: 'POST',
+      headers: {
+        'Content-type': 'application/json'
+      },
+      body: JSON.stringify(credentials)
+    })
+    .then(res => res.json())
+    .then(data => {
+      console.log(data);
+      if (data.loginSuccess) {
+        localStorage.setItem('token', data.token);
+        this.setState({
+          loggedIn: true,
+          token: data.token
+        });
+        this.fetchProjectList();
+      }
+      
+    })
   }
 
   componentDidMount() {
-    this.fetchProjectList();
+    if (this.state.loggedIn) {
+      this.fetchProjectList();
+    }
   }
 
   componentDidUpdate() {
@@ -114,30 +151,38 @@ class App extends Component {
   }
 
   render() {
-    return (
-      <div className="app">
-        <div className="project-list">
-         <h2>Project List</h2>
-          <ProjectList 
-            projectList={this.state.projectList}
-            handleSelectCurrentProject={this.handleSelectCurrentProject}
-          />
-          <AddNewProject handleAddNewProject={this.handleAddNewProject} />
-        </div>
-        <section className="current-project">
-          <div className="current-project__info">
-            <h4>{this.state.currentProject.section}</h4>
-            <h4>{this.state.currentProject.name}</h4>
+    if (this.state.loggedIn) {
+      return (
+        <div className="app">
+          <div className="project-list">
+           <h2>Project List</h2>
+            <ProjectList 
+              projectList={this.state.projectList}
+              handleSelectCurrentProject={this.handleSelectCurrentProject}
+            />
+            <AddNewProject handleAddNewProject={this.handleAddNewProject} />
           </div>
-          <ImagePreview {...this.state.currentProject} />
-          <AddImage  
-            handleUploadImage={this.handleUploadImage}
-          />
-        </section>
-        {/* <button onClick={this.handleTestServer}>Test Server Connection</button> */}
-      </div>
-    );
-  }
+          <section className="current-project">
+            <div className="current-project__info">
+              <h4>{this.state.currentProject.section}</h4>
+              <h4>{this.state.currentProject.name}</h4>
+            </div>
+            <ImagePreview {...this.state.currentProject} />
+            <AddImage  
+              handleUploadImage={this.handleUploadImage}
+            />
+          </section>
+        </div>
+        );
+      } else {
+        return ( 
+          <div>
+            <Login handleLogin={this.handleLogin} />
+          </div>
+        );
+      }
+
+    }
 }
 
 export default App;
