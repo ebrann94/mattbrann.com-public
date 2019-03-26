@@ -18,19 +18,16 @@ router.get('/admin', (req, res) => {
 
 router.post('/admin/login', (req, res) => {
     const { password } = req.body;
-    console.log(password);
 
     const adminCredentials = getJSON(path.join(__dirname, '..', 'data', 'admin.json'))
 
     if (bcrypt.compareSync(password, adminCredentials.password)) {
-        console.log('Credentials Correct');
         const token = jwt.sign({ payload: 'Hello World!' }, 'jacqui', { expiresIn: '1 days' });
         res.send({ 
             loginSuccess: true,
             token 
         });
     } else {
-        console.log('Credentials Incorrect');
         res.status(401).send({ error: 'Username or password incorrect' });
     }
 });
@@ -38,8 +35,6 @@ router.post('/admin/login', (req, res) => {
 // Adds project data to projects.json and creates folder for project images.
 router.post('/admin/add-new-project', auth, (req, res) => {
     const { section, projectName } = req.body;
-
-    console.log(section, projectName);
 
     const newProject = {
         name: projectName,
@@ -89,12 +84,11 @@ router.post('/admin/add-photo', auth, upload.single('photo'), (req, res) => {
 });
 
 router.get('/admin/projects', auth, (req, res) => {
-    console.log('projects.json being sent');
     res.json(projectsJSON);
 });
 
 router.get('/admin/test-connection', (req, res) => {
-    console.log('Connection Established with front end');
+    // console.log('Connection Established with front end');
     res.send();
 });
 
