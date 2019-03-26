@@ -1,0 +1,241 @@
+{
+    "still_life": [
+        {
+            "name": "soho_form",
+            "show": true,
+            "images": [
+                "01_soho_form.png",
+                "02_soho_form.png",
+                "03_soho_form.png"
+            ]
+        },
+        {
+            "name": "burning_money",
+            "show": true,
+            "images": [
+                "BURNING_MONEY1.jpg",
+                "BURNING_MONEY2_thumbnail.png",
+                "BURNING_MONEY3.jpg"
+            ]
+        },
+        {
+            "name": "found_set",
+            "show": true,
+            "images": [
+                "FOUND_SET1.jpg",
+                "THUMBNAIL_FOUND_SET2.jpg"
+            ]
+        },
+        {
+            "name": "gucci_jewellery",
+            "show": true,
+            "images": [
+                "GUCCI_JEWELLERY_1.jpg",
+                "GUCCI_JEWELLERY_2.jpg",
+                "GUCCI_JEWELLERY_4.jpg",
+                "GUCCI_JEWELLERY_5.jpg",
+                "THUMBNAIL.jpg"
+            ]
+        },
+        {
+            "name": "gucci_sunglasses",
+            "show": true,
+            "images": [
+                "GUCCI3.jpg",
+                "GUCCI9.jpg",
+                "THUMBNAIL_GUCCI2.jpg"
+            ]
+        },
+        {
+            "name": "interiors",
+            "show": true,
+            "images": [
+                "INTERIORS_1.png",
+                "INTERIORS_2.png",
+                "INTERIORS_3.png",
+                "INTERIORS_4.png",
+                "INTERIORS_5.png",
+                "INTERIORS_6.png",
+                "INTERIORS_7.png",
+                "THUMBNAIL-8.png"
+            ]
+        },
+        {
+            "name": "nike_cr7",
+            "show": true,
+            "images": [
+                "NIKE_CR71.jpg",
+                "NIKE_CR72.jpg",
+                "NIKE_CR73.jpg",
+                "THUMBNAIL.jpg"
+            ]
+        },
+        {
+            "name": "ninety_nine",
+            "show": true,
+            "images": [
+                "90's-1.jpg",
+                "90's-4.jpg",
+                "90's-7.jpg",
+                "90's-10.jpg",
+                "90's-17.jpg",
+                "THUMBNAIL.jpg"
+            ]
+        },
+        {
+            "name": "party_accessories",
+            "show": true,
+            "images": [
+                "PARTY_ACCESSORIES1.jpg",
+                "PARTY_ACCESSORIES2.jpg",
+                "PARTY_ACCESSORIES3.jpg",
+                "PARTY_ACCESSORIES4.jpg",
+                "PARTY_ACCESSORIES5.jpg",
+                "PARTY_ACCESSORIES7.jpg",
+                "PARTY_ACCESSORIES8.jpg",
+                "THUMBNAIL.jpg"
+            ]
+        },
+        {
+            "name": "versace",
+            "show": true,
+            "images": [
+                "VERSACE_JEWELLERY_1.jpg",
+                "VERSACE_JEWELLERY_2.jpg",
+                "VERSACE_JEWELLERY_3.jpg",
+                "VERSACE_JEWELLERY_5.jpg"
+            ]
+        },
+        {
+            "name": "wonderland_fragrance",
+            "show": true,
+            "images": [
+                "THUMBNAIL_WONDERLAND_FRAGRANCE_1.tif",
+                "WONDERLAND_FRAGRANCE_2.tif",
+                "WONDERLAND_FRAGRANCE_3.tif"
+            ]
+        }
+    ],
+    "streetstyle": [
+        {
+            "name": "lfw",
+            "show": true,
+            "images": [
+                "lfw_2.jpg",
+                "lfw_5.jpg",
+                "lfw_6.jpg",
+                "lfw_7.jpg",
+                "lfw_8.jpg",
+                "lfw_10.jpg",
+                "lfw_11.jpg",
+                "lfw_12.jpg",
+                "lfw_13_5.jpg",
+                "lfw_13.jpg",
+                "lfw_14_5.jpg",
+                "lfw_15.jpg",
+                "lfw_16.jpg",
+                "lfw_17.jpg",
+                "lfw_18.jpg",
+                "lfw_19.jpg",
+                "lfw_20.jpg",
+                "lfw_21.jpg",
+                "lfw_22.jpg",
+                "lfw_25.jpg",
+                "lfw_29.jpg",
+                "lfw_30.jpg",
+                "lfw_31.jpg",
+                "THUMBNAIL_lfw_4.jpg"
+            ]
+        },
+        {
+            "name": "pfw",
+            "show": true,
+            "images": []
+        }
+    ],
+    "editorial": [
+        {
+            "name": "bluey",
+            "show": true,
+            "images": [
+                "1.jpg",
+                "2.jpg",
+                "3.png",
+                "4.jpg",
+                "5.jpg",
+                "6.jpg",
+                "7_thumbnail.png"
+            ]
+        },
+        {
+            "name": "flannels_aw18",
+            "show": true,
+            "images": [
+                "1_THUMBNAIL.jpg",
+                "2.jpg",
+                "3.jpg",
+                "4.jpg",
+                "5.jpg",
+                "6.jpg",
+                "7.jpg",
+                "8.jpg"
+            ]
+        },
+        {
+            "name": "hilfiger_x_gigi",
+            "show": true,
+            "images": [
+                "2.jpg",
+                "3.jpg",
+                "4.jpg",
+                "5.png",
+                "THUMBNAIL_1.jpg"
+            ]
+        },
+        {
+            "name": "jan_fitness",
+            "show": true,
+            "images": [
+                "1_THUMBNAIL.jpg",
+                "2.jpg",
+                "3_5.jpg",
+                "3.jpg",
+                "4.jpg",
+                "6.jpg",
+                "7.jpg",
+                "8.jpg"
+            ]
+        },
+        {
+            "name": "rudemanners",
+            "show": true,
+            "images": [
+                "1_THUMBNAIL.jpg",
+                "1_5.jpg",
+                "2.jpg",
+                "3.jpg",
+                "4.jpg",
+                "5.jpg",
+                "6.jpg",
+                "7.jpg",
+                "8.jpg",
+                "9.jpg",
+                "10.jpg",
+                "11.jpg",
+                "12_5.jpg",
+                "12.jpg",
+                "13.jpg",
+                "14_5.jpg",
+                "14.jpg",
+                "15.jpg",
+                "16.jpg",
+                "17.jpg",
+                "18.jpg",
+                "19.jpg",
+                "20.jpg",
+                "21.jpg"
+            ]
+        }
+    ],
+    "homepage": []
+}
