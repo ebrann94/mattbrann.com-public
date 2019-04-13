@@ -9,11 +9,12 @@ const ProjectList = (props) => {
     
     return(
         <div>
+            <h2>Projects: </h2>
             {keys &&
                 keys.map(key => {
                     return (
                         <div key={key}>
-                            <h3>{key}</h3>
+                            <h3 className="project-list__section">{key}</h3>
                             <ul>
                                 {
                                     props.projectList[key].map(current => (

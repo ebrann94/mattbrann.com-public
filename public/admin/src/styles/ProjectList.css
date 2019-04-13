@@ -1,3 +1,7 @@
-.project-list__item{
+.project-list__item {
     cursor: pointer;
+}
+
+.project-list__section {
+    color: grey;
 }

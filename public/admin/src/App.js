@@ -4,6 +4,7 @@ import AddNewProject from './components/AddNewProject';
 import AddImage from './components/AddImage';
 import ImagePreview from './components/ImagePreview';
 import Login from './components/Login';
+import CurrentProjectInfo from './components/CurrentProjectInfo';
 
 import './App.css';
 
@@ -29,18 +30,29 @@ class App extends Component {
         'Authorization': `Bearer ${this.state.token}`
       }
     })
-      .then(res => res.json())
+      .then(res => {
+        if (res.ok) {
+          return res.json();
+        } else {
+          this.setState({ apiError: 'Unable to fetch project information'});
+        }
+      })
       .then(data => {
         console.log(data);
         this.setState({projectList: data});
+      })
+      .catch(e => {
+        console.log(e);
       });
   }
 
   handleAddNewProject = (e) => {
     e.preventDefault();
 
-    const section = e.target.section.value.replace(' ', '_').toLowerCase();
-    const projectName = e.target.project.value.replace(' ', '_').toLowerCase();
+    const target = e.target;
+    
+    const section = target.section.value.replace(' ', '_').toLowerCase();
+    const projectName = target.project.value.replace(' ', '_').toLowerCase();
 
     const projectInfo = {
       section,
@@ -154,19 +166,15 @@ class App extends Component {
     if (this.state.loggedIn) {
       return (
         <div className="app">
-          <div className="project-list">
-           <h2>Project List</h2>
+          <section className="project-list">
             <ProjectList 
               projectList={this.state.projectList}
               handleSelectCurrentProject={this.handleSelectCurrentProject}
             />
             <AddNewProject handleAddNewProject={this.handleAddNewProject} />
-          </div>
+          </section>
           <section className="current-project">
-            <div className="current-project__info">
-              <h4>{this.state.currentProject.section}</h4>
-              <h4>{this.state.currentProject.name}</h4>
-            </div>
+            <CurrentProjectInfo currentProject={this.state.currentProject} />
             <ImagePreview {...this.state.currentProject} />
             <AddImage  
               handleUploadImage={this.handleUploadImage}
