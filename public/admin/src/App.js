@@ -94,15 +94,12 @@ class App extends Component {
     this.setState({ currentProject });
   }
 
-  handleUploadImage = (e) => {
-    e.preventDefault();
+  handleUploadImage = (file) => {
 
-    const form = e.target;
-    
     const data = new FormData();
     data.append('section', this.state.currentProject.section);
     data.append('projectName', this.state.currentProject.name);
-    data.append('photo', form.photo.files[0]);
+    data.append('photo', file);
 
     for(let pair of data.entries()) {
       console.log(pair);
@@ -176,9 +173,7 @@ class App extends Component {
           <section className="current-project">
             <CurrentProjectInfo currentProject={this.state.currentProject} />
             <ImagePreview {...this.state.currentProject} />
-            <AddImage  
-              handleUploadImage={this.handleUploadImage}
-            />
+            <AddImage handleUploadImage={this.handleUploadImage} />
           </section>
         </div>
         );
