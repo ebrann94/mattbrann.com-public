@@ -6,6 +6,17 @@ const ProjectList = (props) => {
     if (props.projectList) {
         var keys = Object.keys(props.projectList);
     }
+
+    const projectList = (key) => {
+        return props.projectList[key].map(current => (
+            <ProjectListItem 
+                key={current.name}
+                name={current.name}
+                section={key}
+                handleSelectCurrentProject={props.handleSelectCurrentProject}
+            />
+        ))
+    }
     
     return(
         <div>
@@ -16,16 +27,7 @@ const ProjectList = (props) => {
                         <div key={key}>
                             <h3 className="project-list__section">{key}</h3>
                             <ul>
-                                {
-                                    props.projectList[key].map(current => (
-                                        <ProjectListItem 
-                                            key={current.name}
-                                            name={current.name}
-                                            section={key}
-                                            handleSelectCurrentProject={props.handleSelectCurrentProject}
-                                        />
-                                    ))
-                                }
+                                {projectList(key)}
                             </ul>
                         </div>
                     )

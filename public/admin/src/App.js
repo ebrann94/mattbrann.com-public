@@ -46,13 +46,9 @@ class App extends Component {
       });
   }
 
-  handleAddNewProject = (e) => {
-    e.preventDefault();
-
-    const target = e.target;
-    
-    const section = target.section.value.replace(' ', '_').toLowerCase();
-    const projectName = target.project.value.replace(' ', '_').toLowerCase();
+  handleAddNewProject = (fields) => {
+    const section = fields.section.replace(' ', '_').toLowerCase();
+    const projectName = fields.project.replace(' ', '_').toLowerCase();
 
     const projectInfo = {
       section,
@@ -119,12 +115,9 @@ class App extends Component {
     })
   }
 
-  handleLogin = (e) => {
-    e.preventDefault();
-    console.log(e.target.password.value);
-    // this.setState({ loggedIn: true });
+  handleLogin = (password) => {
     const credentials = {
-      password: e.target.password.value
+      password
     }
 
     fetch('/admin/login', {
@@ -156,7 +149,7 @@ class App extends Component {
   }
 
   componentDidUpdate() {
-    console.log(this.state);
+    // console.log(this.state);
   }
 
   render() {
