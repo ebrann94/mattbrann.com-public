@@ -46,13 +46,13 @@ class App extends Component {
       });
   }
 
-  handleAddNewProject = (fields) => {
-    const section = fields.section.replace(' ', '_').toLowerCase();
-    const projectName = fields.project.replace(' ', '_').toLowerCase();
+  handleAddNewProject = (section, project) => {
+    const sectionFormatted = section.replace(' ', '_').toLowerCase();
+    const projectFormatted = project.replace(' ', '_').toLowerCase();
 
     const projectInfo = {
-      section,
-      projectName
+      section: sectionFormatted,
+      projectName: projectFormatted
     }
 
     fetch('/admin/add-new-project', {
@@ -161,12 +161,18 @@ class App extends Component {
               projectList={this.state.projectList}
               handleSelectCurrentProject={this.handleSelectCurrentProject}
             />
-            <AddNewProject handleAddNewProject={this.handleAddNewProject} />
+            <AddNewProject 
+              handleAddNewProject={this.handleAddNewProject} 
+              sections={[1, 2, 3, 4, 5]}
+              //sections={Object.key(this.state.projectList)}
+            />
           </section>
           <section className="current-project">
             <CurrentProjectInfo currentProject={this.state.currentProject} />
             <ImagePreview {...this.state.currentProject} />
-            <AddImage handleUploadImage={this.handleUploadImage} />
+            <AddImage 
+              handleUploadImage={this.handleUploadImage} 
+            />
           </section>
         </div>
         );
