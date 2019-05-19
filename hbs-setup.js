@@ -1,6 +1,4 @@
 const hbs = require('hbs');
-const fs = require('fs');
-const path = require('path');
 
 const { getJSON, projectsJSONPath } = require('./utils');
 

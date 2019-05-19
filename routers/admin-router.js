@@ -92,11 +92,5 @@ router.get('/admin/test-connection', (req, res) => {
     res.send();
 });
 
-// router.post('/admin/photo-test', upload.single('photo'), (req, res) => {
-//     console.log(req.body.section, req.body.projectName);
-//     console.log(req.file);
-//     res.send();
-// })
-
 module.exports = router;
 
