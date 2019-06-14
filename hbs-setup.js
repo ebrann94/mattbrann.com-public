@@ -1,8 +1,5 @@
 const hbs = require('hbs');
 
-const { getJSON, projectsJSONPath } = require('./utils');
-
-
 // Register Partials
 hbs.registerPartials(__dirname + '/views/partials/');
 
@@ -11,54 +8,54 @@ hbs.registerHelper('menu-composer', menuComposer);
 hbs.registerHelper('image-list', imageList);
 
 // Menu Helper
-function menuComposer(currentPage) {
-    const projects = getJSON(projectsJSONPath);
+function menuComposer(currentPage, projectList) {
 
-    let out = [];
-    for(let property in projects) {
-        let topicClassNames = 'menu__topic';
-        let dropdownClass = 'drop-down-content'
+    function generateURL(section, name, current) {
+        return name === current ? '#' : `/projects/${section}/${name}`;
+    }
 
-        const links = projects[property].map(link => {
-            if (link.name.toLowerCase() !== currentPage) {
-                return `<li><a href="/projects/${property}/${link.name.toLowerCase()}">${link.name.replace('_', ' ')}</a></li>`;
-            } else {
-                topicClassNames += ' menu__topic-active';
-                dropdownClass += ' open';
-                return `<li><a href="#">${link.name.replace('_', ' ')}</a></li>`
+    const keys = Object.keys(projectList);
+    const out = keys.map(key => {
+        let isCurrentSection = false;
+
+        const linksList = projectList[key].map(link => {
+            if (currentPage === link) {
+                isCurrentSection = true;
             }
+            return `<li><a href="${generateURL(key, link, currentPage)}">${link.replace(/_/g, ' ')}</a></li>`;
         });
-        
-        const branch = `
-            <div class="menu__branch ${property}">
-                <div class="${topicClassNames}">
-                    <h3>${property.replace('_', ' ').toUpperCase()}</h3>
+
+        if (linksList.length === 0) {
+            return '';
+        }
+
+        const topicClassBase = 'menu__topic';
+        const dropdownClassBase = 'drop-down-content';
+
+        const topicClasses = isCurrentSection ?  topicClassBase + ' menu__topic--active' : topicClassBase;
+        const dropdownClasses = isCurrentSection ? dropdownClassBase + ' drop-down--open' : dropdownClassBase;
+
+        return  `
+            <div class="menu__branch ${key}">
+                <div class="${topicClasses}">
+                    <h3>${key.replace(/_/g, ' ').toUpperCase()}</h3>
                 </div>
-                <div class="${dropdownClass}">
+                <div class="${dropdownClasses}">
                     <ul>
-                        ${links.join('\n')}
+                        ${linksList.join('\n')}
                     </ul>
                 </div>
             </div>
-        `
-        out.push(branch);
-    }
+        `;
+    });
     return new hbs.handlebars.SafeString(out.join(''));
 }
 
-
 // Image helper
-function imageList(folder, project) {
-    const projects = getJSON(projectsJSONPath);
-
-    let out = [];
-    projects[folder].forEach(current => {
-        if(current.name === project) {
-            out = current.images.map(imageName => {
-                return `<img src="/images/${folder}/${project}/${imageName}" class="slideshow__slide slide__portrait"/>\n`
-            });
-        }
+function imageList(section, project, images) {
+    const out = images.map(filename => {
+        return `<img src="/images/${section}/${project}/${filename}" class="slideshow__slide" alt="project"/>\n`;
     });
 
-    return new hbs.handlebars.SafeString(out.join('\n')); 
+    return new hbs.handlebars.SafeString(out.join(''));
 }

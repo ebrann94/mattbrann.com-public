@@ -1,118 +1,513 @@
 {
     "still_life": [
         {
-            "name": "soho_form",
-            "show": true,
-            "images": [
-                "01_soho_form.png",
-                "02_soho_form.png",
-                "03_soho_form.png"
-            ]
-        },
-        {
             "name": "burning_money",
             "show": true,
             "images": [
-                "BURNING_MONEY1.jpg",
-                "BURNING_MONEY2_thumbnail.png",
-                "BURNING_MONEY3.jpg"
+                {
+                    "filename": "01_burning_money.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "02_burning_money.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "03_burning_money.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "Matthew_Doctors_Letter_.jpeg",
+                    "show": true
+                },
+                {
+                    "filename": "Matthew_Doctors_Letter_2.jpeg",
+                    "show": true
+                }
             ]
         },
         {
             "name": "found_set",
             "show": true,
             "images": [
-                "FOUND_SET1.jpg",
-                "THUMBNAIL_FOUND_SET2.jpg"
+                {
+                    "filename": "01_found_set.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "02_found_set.jpg",
+                    "show": true
+                }
             ]
         },
         {
             "name": "gucci_jewellery",
             "show": true,
             "images": [
-                "GUCCI_JEWELLERY_1.jpg",
-                "GUCCI_JEWELLERY_2.jpg",
-                "GUCCI_JEWELLERY_4.jpg",
-                "GUCCI_JEWELLERY_5.jpg",
-                "THUMBNAIL.jpg"
+                {
+                    "filename": "01_gucci_jewellery.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "02_gucci_jewellery.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "03_gucci_jewellery.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "04_gucci_jewellery.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "05_gucci_jewellery.jpg",
+                    "show": true
+                }
             ]
         },
         {
             "name": "gucci_sunglasses",
             "show": true,
             "images": [
-                "GUCCI3.jpg",
-                "GUCCI9.jpg",
-                "THUMBNAIL_GUCCI2.jpg"
+                {
+                    "filename": "01_gucci_sunglasses.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "02_gucci_sunglasses.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "03_gucci_sunglasses.jpg",
+                    "show": true
+                }
             ]
         },
         {
             "name": "interiors",
             "show": true,
             "images": [
-                "INTERIORS_1.png",
-                "INTERIORS_2.png",
-                "INTERIORS_3.png",
-                "INTERIORS_4.png",
-                "INTERIORS_5.png",
-                "INTERIORS_6.png",
-                "INTERIORS_7.png",
-                "THUMBNAIL-8.png"
+                {
+                    "filename": "01_interiors.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "02_interiors.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "03_interiors.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "04_interiors.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "05_interiors.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "06_interiors.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "07_interiors.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "08_interiors.jpg",
+                    "show": true
+                }
             ]
         },
         {
             "name": "nike_cr7",
             "show": true,
             "images": [
-                "NIKE_CR71.jpg",
-                "NIKE_CR72.jpg",
-                "NIKE_CR73.jpg",
-                "THUMBNAIL.jpg"
+                {
+                    "filename": "01_nike_cr7.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "02_nike_cr7.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "03_nike_cr7.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "04_nike_cr7.jpg",
+                    "show": true
+                }
             ]
         },
         {
             "name": "ninety_nine",
             "show": true,
             "images": [
-                "90's-1.jpg",
-                "90's-4.jpg",
-                "90's-7.jpg",
-                "90's-10.jpg",
-                "90's-17.jpg",
-                "THUMBNAIL.jpg"
+                {
+                    "filename": "01_ninety_nine.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "02_ninety_nine.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "03_ninety_nine.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "04_ninety_nine.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "05_ninety_nine.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "06_ninety_nine.jpg",
+                    "show": true
+                }
             ]
         },
         {
             "name": "party_accessories",
             "show": true,
             "images": [
-                "PARTY_ACCESSORIES1.jpg",
-                "PARTY_ACCESSORIES2.jpg",
-                "PARTY_ACCESSORIES3.jpg",
-                "PARTY_ACCESSORIES4.jpg",
-                "PARTY_ACCESSORIES5.jpg",
-                "PARTY_ACCESSORIES7.jpg",
-                "PARTY_ACCESSORIES8.jpg",
-                "THUMBNAIL.jpg"
+                {
+                    "filename": "01_party_accessories.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "02_party_accessories.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "03_party_accessories.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "04_party_accessories.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "05_party_accessories.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "06_party_accessories.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "07_party_accessories.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "08_party_accessories.jpg",
+                    "show": true
+                }
+            ]
+        },
+        {
+            "name": "soho_form",
+            "show": true,
+            "images": [
+                {
+                    "filename": "01_soho_form.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "02_soho_form.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "03_soho_form.jpg",
+                    "show": true
+                }
             ]
         },
         {
             "name": "versace",
             "show": true,
             "images": [
-                "VERSACE_JEWELLERY_1.jpg",
-                "VERSACE_JEWELLERY_2.jpg",
-                "VERSACE_JEWELLERY_3.jpg",
-                "VERSACE_JEWELLERY_5.jpg"
+                {
+                    "filename": "01_versace.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "02_versace.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "03_versace.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "04_versace.jpg",
+                    "show": true
+                }
             ]
         },
         {
             "name": "wonderland_fragrance",
             "show": true,
             "images": [
-                "THUMBNAIL_WONDERLAND_FRAGRANCE_1.tif",
-                "WONDERLAND_FRAGRANCE_2.tif",
-                "WONDERLAND_FRAGRANCE_3.tif"
+                {
+                    "filename": "01_wonderland_fragrance.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "02_wonderland_fragrance.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "03_wonderland_fragrance.jpg",
+                    "show": true
+                }
+            ]
+        }
+    ],
+    "editorial": [
+        {
+            "name": "bluey",
+            "show": true,
+            "images": [
+                {
+                    "filename": "01_bluey.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "02_bluey.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "03_bluey.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "04_bluey.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "05_bluey.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "06_bluey.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "07_bluey.jpg",
+                    "show": true
+                }
+            ]
+        },
+        {
+            "name": "flannels_aw18",
+            "show": true,
+            "images": [
+                {
+                    "filename": "01_flannels_aw18.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "02_flannels_aw18.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "03_flannels_aw18.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "04_flannels_aw18.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "05_flannels_aw18.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "06_flannels_aw18.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "07_flannels_aw18.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "08_flannels_aw18.jpg",
+                    "show": true
+                }
+            ]
+        },
+        {
+            "name": "hilfiger_x_gigi",
+            "show": true,
+            "images": [
+                {
+                    "filename": "01_hilfiger_x_gigi.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "02_hilfiger_x_gigi.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "03_hilfiger_x_gigi.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "04_hilfiger_x_gigi.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "05_hilfiger_x_gigi.jpg",
+                    "show": true
+                }
+            ]
+        },
+        {
+            "name": "jan_fitness",
+            "show": true,
+            "images": [
+                {
+                    "filename": "01_jan_fitness.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "02_jan_fitness.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "03_jan_fitness.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "04_jan_fitness.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "05_jan_fitness.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "06_jan_fitness.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "07_jan_fitness.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "08_jan_fitness.jpg",
+                    "show": true
+                }
+            ]
+        },
+        {
+            "name": "rudemanners",
+            "show": true,
+            "images": [
+                {
+                    "filename": "01_rudemanners.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "02_rudemanners.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "03_rudemanners.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "04_rudemanners.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "05_rudemanners.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "06_rudemanners.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "07_rudemanners.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "08_rudemanners.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "09_rudemanners.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "10_rudemanners.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "11_rudemanners.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "12_rudemanners.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "13_rudemanners.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "14_rudemanners.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "15_rudemanners.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "16_rudemanners.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "17_rudemanners.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "18_rudemanners.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "19_rudemanners.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "20_rudemanners.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "21_rudemanners.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "22_rudemanners.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "23_rudemanners.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "24_rudemanners.jpg",
+                    "show": true
+                }
             ]
         }
     ],
@@ -121,121 +516,201 @@
             "name": "lfw",
             "show": true,
             "images": [
-                "lfw_2.jpg",
-                "lfw_5.jpg",
-                "lfw_6.jpg",
-                "lfw_7.jpg",
-                "lfw_8.jpg",
-                "lfw_10.jpg",
-                "lfw_11.jpg",
-                "lfw_12.jpg",
-                "lfw_13_5.jpg",
-                "lfw_13.jpg",
-                "lfw_14_5.jpg",
-                "lfw_15.jpg",
-                "lfw_16.jpg",
-                "lfw_17.jpg",
-                "lfw_18.jpg",
-                "lfw_19.jpg",
-                "lfw_20.jpg",
-                "lfw_21.jpg",
-                "lfw_22.jpg",
-                "lfw_25.jpg",
-                "lfw_29.jpg",
-                "lfw_30.jpg",
-                "lfw_31.jpg",
-                "THUMBNAIL_lfw_4.jpg"
+                {
+                    "filename": "01_lfw.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "02_lfw.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "03_lfw.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "04_lfw.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "05_lfw.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "06_lfw.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "07_lfw.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "08_lfw.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "09_lfw.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "10_lfw.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "11_lfw.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "12_lfw.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "13_lfw.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "14_lfw.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "15_lfw.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "16_lfw.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "17_lfw.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "18_lfw.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "19_lfw.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "20_lfw.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "21_lfw.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "22_lfw.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "23_lfw.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "24_lfw.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "25_lfw.jpg",
+                    "show": true
+                }
             ]
         },
         {
             "name": "pfw",
             "show": true,
-            "images": []
+            "images": [
+                {
+                    "filename": "01_pfw.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "02_pfw.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "03_pfw.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "04_pfw.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "05_pfw.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "06_pfw.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "07_pfw.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "08_pfw.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "09_pfw.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "10_pfw.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "11_pfw.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "12_pfw.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "13_pfw.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "14_pfw.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "15_pfw.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "16_pfw.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "17_pfw.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "18_pfw.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "19_pfw.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "20_pfw.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "21_pfw.jpg",
+                    "show": true
+                },
+                {
+                    "filename": "22_pfw.jpg",
+                    "show": true
+                }
+            ]
         }
-    ],
-    "editorial": [
-        {
-            "name": "bluey",
-            "show": true,
-            "images": [
-                "1.jpg",
-                "2.jpg",
-                "3.png",
-                "4.jpg",
-                "5.jpg",
-                "6.jpg",
-                "7_thumbnail.png"
-            ]
-        },
-        {
-            "name": "flannels_aw18",
-            "show": true,
-            "images": [
-                "1_THUMBNAIL.jpg",
-                "2.jpg",
-                "3.jpg",
-                "4.jpg",
-                "5.jpg",
-                "6.jpg",
-                "7.jpg",
-                "8.jpg"
-            ]
-        },
-        {
-            "name": "hilfiger_x_gigi",
-            "show": true,
-            "images": [
-                "2.jpg",
-                "3.jpg",
-                "4.jpg",
-                "5.png",
-                "THUMBNAIL_1.jpg"
-            ]
-        },
-        {
-            "name": "jan_fitness",
-            "show": true,
-            "images": [
-                "1_THUMBNAIL.jpg",
-                "2.jpg",
-                "3_5.jpg",
-                "3.jpg",
-                "4.jpg",
-                "6.jpg",
-                "7.jpg",
-                "8.jpg"
-            ]
-        },
-        {
-            "name": "rudemanners",
-            "show": true,
-            "images": [
-                "1_THUMBNAIL.jpg",
-                "1_5.jpg",
-                "2.jpg",
-                "3.jpg",
-                "4.jpg",
-                "5.jpg",
-                "6.jpg",
-                "7.jpg",
-                "8.jpg",
-                "9.jpg",
-                "10.jpg",
-                "11.jpg",
-                "12_5.jpg",
-                "12.jpg",
-                "13.jpg",
-                "14_5.jpg",
-                "14.jpg",
-                "15.jpg",
-                "16.jpg",
-                "17.jpg",
-                "18.jpg",
-                "19.jpg",
-                "20.jpg",
-                "21.jpg"
-            ]
-        }
-    ],
-    "homepage": []
+    ]
 }
